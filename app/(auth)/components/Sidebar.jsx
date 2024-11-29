@@ -1,6 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { auth } from "@/firebase"; // Assuming you have Firebase initialized in a file called firebase.js
+import {  onAuthStateChanged } from "firebase/auth";
+import { useRouter } from "next/navigation";
+
+
 import {
   FaHome,
   FaUser,
@@ -22,6 +27,7 @@ import Link from "next/link";
 
 
 export default function Sidebar() {
+  const router = useRouter();
   const [isExpanded, setIsExpanded] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -30,7 +36,18 @@ export default function Sidebar() {
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsExpanded(false);
-  }, [pathname]);
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is already logged in, redirect to dashboard
+        // toast.success("Already logged in...");
+        router.push("/users"); // Adjust the route as per your application
+      }
+    });
+
+    // Clean up subscription on unmount
+    return () => unsubscribe();
+    
+  }, [pathname] ,[router]);
 
   return (
     <>
