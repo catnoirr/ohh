@@ -28,7 +28,7 @@ const MagicMenuIndicator = () => {
       "/about": 1,
       "/scanner": 2,
       "/CampusAmbassador": 3,
-      "/signin": 4,
+      "/sign-in": 4,
     };
     if (pathToIndexMap[pathname] !== undefined) {
       setActiveIndex(pathToIndexMap[pathname]);
@@ -166,6 +166,7 @@ const MagicMenuIndicator = () => {
           </li>
           <li
             className={`list ${activeIndex === 4 ? "active" : ""}`}
+            onClick={() => handleSetActive(3, "/sign-in")}
             
           >
             <a>
