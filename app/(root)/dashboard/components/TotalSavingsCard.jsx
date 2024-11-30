@@ -80,14 +80,7 @@ const TotalSavingsCard = () => {
       <div className="flex items-center">
         {/* Icon */}
         <div className="bg-gray-200 p-3 rounded-full">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="green"
-            viewBox="0 0 24 24"
-            className="w-8 h-8"
-          >
-            <path d="M12 22C7.03 22 3 17.97 3 13S7.03 4 12 4s9 4.03 9 9-4.03 9-9 9zm0-16C8.14 6 5 9.14 5 13s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm.5 5H11v2.5h-1.5v1H11V17h1.5v-2.5h1.5v-1H12.5V11z" />
-          </svg>
+          <img src="/money-tag-green.png" alt="" />
         </div>
         {/* Text Content */}
         <div className="ml-4">
