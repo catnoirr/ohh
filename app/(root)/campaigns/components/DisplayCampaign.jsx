@@ -23,9 +23,9 @@ const CampaignSection = ({ title, campaigns, isLoading }) => {
       {/* Section Header */}
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-semibold text-white">{title}</h2>
-        <button className="text-white text-sm border border-[#A3A3A3] bg-[#F2F0F53D] px-2 py-1 rounded-md">
+        {/* <button className="text-white text-sm border border-[#A3A3A3] bg-[#F2F0F53D] px-2 py-1 rounded-md">
           View All
-        </button>
+        </button> */}
       </div>
 
       {/* Grid Layout for Campaigns */}
@@ -44,7 +44,7 @@ const CampaignSection = ({ title, campaigns, isLoading }) => {
               imageSrc={campaign.adCreative}
               discount={campaign.vendors?.[0]?.firstPrize || 'No discount available'}
               offerTill={normalizeDate(campaign.endDate) }
-              onButtonClick={() => router.push('/campaigns')}
+              onButtonClick={() => router.push(`/vendor-campaign/${campaign.id}`)}
             />
           ))
         ) : (

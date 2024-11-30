@@ -85,7 +85,7 @@ export default function BottomNavBar() {
           <ul>
             <li
               className={`list ${activeTabIndex === 0 ? "active" : ""}`}
-              onClick={() => handleNavigation(0, "/")}
+              onClick={() => handleNavigation(0, "/users")}
             >
               <a>
                 <span className="icon">
