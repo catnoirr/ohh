@@ -94,7 +94,11 @@ const TotalCoupons = () => {
             </div>
           ))
         ) : (
-          <p className="text-gray-500">No redeemed coupons to show.</p>
+          <div className="animate-pulse">
+            <div className="h-6 w-1/2 bg-gray-300 rounded-full"></div>
+            <div className="h-4 w-1/3 bg-gray-300 rounded-full mt-2"></div>
+            <div className="h-4 w-1/4 bg-gray-300 rounded-full mt-2"></div>
+          </div>
         )}
       </div>
     </div>
