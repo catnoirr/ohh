@@ -14,13 +14,10 @@ const CampaignCard = ({
   const [selectedVendor, setSelectedVendor] = useState(null);
 
   const fetchVendor = async () => {
-    const data = [];
-    vendors.forEach((vendor) => {
-      if (campaignVendors.some((cv) => cv.vendorId === vendor.vid)) {
-        data.push(vendor);
-      }
-    });
-    setSelectedVendor(data[0]);
+    const data = vendors?.filter((vendor) =>
+      campaignVendors?.some((cv) => cv.vendorId === vendor.vid)
+    );
+    setSelectedVendor(data?.[0]);
   };
 
   useEffect(() => {

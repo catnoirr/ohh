@@ -270,3 +270,7 @@ opacity: 0px;
   .blink {
     animation: blink 1s linear infinite;
   }
+  .dashboard{
+    background: linear-gradient(180deg, #341266 0%, #FFFFFF 100%);
+
+  }
