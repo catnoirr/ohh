@@ -44,6 +44,7 @@ const TotalSavingsCard = () => {
   }, []);
 
   return (
+    
     <div className=" h-[154px] w-full bg-gradient-to-b dashboard shadow-lg flex justify-between pl-4 ">
       <div className="flex items-center">
         {/* Icon */}

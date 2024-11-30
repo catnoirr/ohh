@@ -79,16 +79,16 @@ export default function Profile() {
       {/* Dashboard & Rewards */}
       <div className="flex justify-around items-center bg-[#50287E] py-4 px-10 -mt-5 rounded-xl mb-16">
         <div className="border-t bg-white w-full relative flex items-center justify-between px-6 py-2 rounded-3xl top-10">
-          <div className="flex flex-col items-center">
-            <MdDashboard className="text-oohpoint-primary-3 text-2xl" />
-            <span className="text-oohpoint-primary-3 text-sm mt-1">
+          <div className="flex flex-col items-center" onClick={() => router.push("/dashboard")}>
+            <MdDashboard className="text-oohpoint-primary-3 text-2xl cursor-pointer" />
+            <span className="text-oohpoint-primary-3 text-sm mt-1 cursor-pointer">
               Dashboard
             </span>
           </div>
           <div className="w-[1px] h-8 bg-oohpoint-primary-3"></div>
-          <div className="flex flex-col items-center">
-            <FaGift className="text-oohpoint-primary-3 text-2xl" />
-            <span className="text-oohpoint-primary-3 text-sm mt-1">
+          <div className="flex flex-col items-center" onClick={() => router.push("/coupons")}>
+            <FaGift className="text-oohpoint-primary-3 text-2xl cursor-pointer" />
+            <span className="text-oohpoint-primary-3 text-sm mt-1 cursor-pointer">
               Rewards
             </span>
           </div>
