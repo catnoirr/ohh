@@ -25,8 +25,8 @@ const StorySection = () => {
                 <FaFileAlt className="text-white text-xl sm:text-2xl" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg">Innovation</h3>
-                <p className="text-gray-600 text-sm">Constantly evolving to bring the latest technology and solutions to our clients and users.</p>
+                <h3 className="font-semibold text-lg">Real-Time Analytics</h3>
+                <p className="text-gray-600 text-sm"> Know exactly how your campaign is performing with real-time data and insights.</p>
               </div>
             </div>
             <div className="flex  space-x-4">
@@ -34,8 +34,8 @@ const StorySection = () => {
                 <FaFileAlt className="text-white text-xl sm:text-2xl" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg">Transparency</h3>
-                <p className="text-gray-600 text-sm">Providing real-time insights and measurable results to ensure brands know the impact of their campaigns.</p>
+                <h3 className="font-semibold text-lg">Engagement & Reward</h3>
+                <p className="text-gray-600 text-sm">Make every interaction count by offering users discounts and incentives, creating more </p>
               </div>
             </div>
             <div className="flex  space-x-4">

@@ -43,12 +43,12 @@ const Testimonials = () => {
                     <p className="text-gray-700 mb-4">
                       "Oohpoint really made a huge difference for our college fest. They not only sponsored the event but also designed amazing creative assets that made the event more memorable."
                     </p>
-                    <div className="flex items-center space-x-4">
+                    {/* <div className="flex items-center space-x-4">
                       <img src="/user1.jpeg" alt="Rahul" className="w-10 h-10 rounded-full" />
                       <div>
                         <p className="text-sm font-semibold text-gray-800">Rahul, Final Year BMS</p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Testimonial Card 2 */}
@@ -64,12 +64,12 @@ const Testimonials = () => {
                     <p className="text-gray-700 mb-4">
                       "Oohpoint's sponsorship really gave a major change to our fest. The team was professional, and the crowd was excited to see what was presented."
                     </p>
-                    <div className="flex items-center space-x-4">
+                    {/* <div className="flex items-center space-x-4">
                       <img src="/user1.jpeg" alt="Sneha" className="w-10 h-10 rounded-full" />
                       <div>
                         <p className="text-sm font-semibold text-gray-800">Sneha, Cultural Secretary</p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </SwiperSlide>

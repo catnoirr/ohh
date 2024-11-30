@@ -7,10 +7,10 @@ const Hero = () => {
   return (
     <section className="flex flex-col md:flex-row  items-center justify-between   p-6 md:p-8 md:py-16 ">
       {/* Left Side - Images and Statistics */}
-      <div className="flex gap-4">
+      <div className="flex gap-4   max-h-sm">
         {/* Image 1 */}
         
-        <img src="/image1.jpg" alt="Workplace" className="rounded-lg shadow-md sm:w-80 w-36 hidden md:block" />
+        <img src="/image1.jpg" alt="Workplace" className="rounded-lg shadow-md sm:w-80 w-36 md:h-full hidden md:block" />
         
         {/* Statistics Boxes */}
         <div className='flex flex-col gap-4 '>
@@ -27,14 +27,14 @@ const Hero = () => {
         </div>
 
         {/* Image 2 */}
-        <div className='h-full'>
-        <img src="/image2.jpg" alt="Workplace" className="rounded-lg shadow-md h-full object-cover" />
+        <div className='h-full w-full'>
+        <img src="/image2.jpg" alt="Workplace" className="rounded-lg shadow-md  object-cover md:max-h-96 md:w-full " />
         </div>
       </div>
       </div>
 
       {/* Right Side - Content */}
-      <div className="mt-8 md:mt-0 md:ml-16">
+      <div className="mt-8 md:mt-0 md:ml-16  w-full max-w-md">
       <div className="flex items-center mb-4  bg-gray-200 border rounded-xl shadow p-2 w-64 sm:w-72">
             {/* <i> <FaAward className="text-4xl text-red-800" /></i> */}
             <p className="ml-2 text-sm sm:text-base"> 💛 Your gateway to digital success</p>

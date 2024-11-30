@@ -102,7 +102,7 @@ const Testimonials = () => {
                 />
                
               </div>
-              <span className="text-xs sm:text-sm font-semibold">The best Bootstrap theme we've ever used </span>
+              <span className="text-xs sm:text-sm font-semibold">Communities tailored for professional growth.</span>
               
             </div>
 

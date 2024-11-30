@@ -42,7 +42,7 @@ const Footer = () => {
               <li className="text-sm mb-2">Career</li>
               <li className="text-sm mb-2 cursor-pointer" onClick={() => router.push('/joincomunity')}>Join Community</li>
               <li className="text-sm mb-2 cursor-pointer" onClick={() => router.push('/CampusAmbassador')}>Student Ambassador</li>
-              <li className="text-sm mb-2 cursor-pointer" onClick={() => router.push('/engagement')}>Sponsorship</li>
+              <li className="text-sm mb-2 cursor-pointer" onClick={() => router.push('/sponsership')}>Sponsorship</li>
             </ul>
           </div>
 

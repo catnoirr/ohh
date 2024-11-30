@@ -33,10 +33,9 @@ const AdvertisingBanner = () => {
        <div className='flex justify-between md:flex-row flex-col ' >
       <div className=" md:p-16 p-4 rounded-lg md:w-8/12 custome ">
         <h1 className="md:text-5xl text-4xl font-bold text-blue-600 mb-4">
-        Deliver the perfect <span className='text-green-600'>solution </span>
-        for your cilent        </h1>
+        Scan, Engage, and Get Rewarded!       </h1>
         <p className="md:text-lg text-md text-purtle-700 mb-6">
-        Be a leader, grow your network, and shape the future of advertising on your campus!Be a leader, grow your network, and shape the future of advertising on your campus!
+        At Oohpoint, we are passionate about partnering with events of all types—college fests, corporate gatherings, competitions, and more. Whether it's a small or large event, we sponsorshipto ensure your attendees get the most out of your occasion.
         </p>
         <div className="flex  sm:flex-row md:justify-start  gap-4">
           <button className="bg-green-100  text-green-400 md:py-4 md:px-6 px-3 py-3 rounded-lg shadow-md " onClick={() => router.push('/sign-up')}>

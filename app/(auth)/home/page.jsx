@@ -20,9 +20,9 @@ const Page = () => {
       <OurClient/>
       <Campaign/>
       <HowsItWork/>
-      <div className=' my-8 '>
+      {/* <div className=' my-8 '>
         <img src="./image 43.png" alt="image "  />
-      </div>
+      </div> */}
       <Blog/>
       <Success/>
       <Questions/>

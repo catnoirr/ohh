@@ -78,21 +78,21 @@ const Testimonials = () => {
         </div>
 
         {/* Right Content - Image Section */}
-        <div className="md:w-1/2 flex justify-end   relative ">
-          <div className="relative max-w-md">
+        <div className="md:w-1/2 flex   relative ">
+          <div className="relative ">
             {/* Dots decoration behind the main image */}
           
             {/* Main Image */}
             <Image
-              src="/Rectangle 4396.png" // Replace with actual path
+              src="/rating.png" // Replace with actual path
               width={600}
               height={400}
               alt="Laptop and plant on table"
-              className="rounded-lg w-full relative z-0"
+              className="rounded-lg w-full h-full relative z-0"
             />
 
             {/* Top Card - Meeting With */}
-            <div className="absolute -top-5 -left-20 sm:right-40 right-24 bg-purtle-700 text-white p-3 rounded-lg shadow-lg flex items-center space-x-2 z-20">
+            {/* <div className="absolute -top-5 -left-20 sm:right-40 right-24 bg-purtle-700 text-white p-3 rounded-lg shadow-lg flex items-center space-x-2 z-20">
             <div className="flex -space-x-2">
                 <img
                   src="/user1.jpeg" // Replace with actual path
@@ -103,10 +103,10 @@ const Testimonials = () => {
               </div>
               <span className="text-xs sm:text-sm font-semibold">The best Bootstrap theme we've ever used </span>
               
-            </div>
+            </div> */}
 
             {/* Bottom Card - Customer Satisfaction */}
-            <div className="absolute bottom-3 -left-20 bg-purtle-700 text-white p-3 rounded-lg shadow-lg   flex items-center space-x-2 z-20">
+            {/* <div className="absolute bottom-3 -left-20 bg-purtle-700 text-white p-3 rounded-lg shadow-lg   flex items-center space-x-2 z-20">
             
               <span className="text-xs sm:text-sm font-semibold">Excelent Work</span>
               <div className="flex -space-x-2">
@@ -117,7 +117,7 @@ const Testimonials = () => {
                 />
                
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

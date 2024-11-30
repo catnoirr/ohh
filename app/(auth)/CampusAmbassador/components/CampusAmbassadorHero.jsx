@@ -10,10 +10,9 @@ const CampusAmbassadorProgram = () => {
         {/* Left content */}
         <div className="lg:w-1/2  lg:text-left lg:pr-8 px-4">
           <h1 className="text-4xl sm:text-4xl lg:text-7xl font-semibold text-black mb-4 pb-4">
-            Tell a <span className='text-blue-600'> better brand</span> story
-          </h1>
+          Maximize Engagement at Your Next Big Event!          </h1>
           <p className="text-black mb-6 pb-4 text-base sm:text-lg">
-          Be a leader, grow your network, and shape the future of advertising on your campus!Be a leader, grow your network, and shape the future of advertising on your campus!          </p>
+          Explore our focused communities designed to cater to diverse professional needs, offering tailored resources, networking opportunities, and expert insights to help you thrive in your career.        </p>
           <div className='flex gap-5'>
           <button className="bg-purtle-700 text-white py-2 px-4 sm:py-3 sm:px-6 rounded-xl hover:bg-purple-900">
             Join Now

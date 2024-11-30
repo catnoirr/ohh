@@ -60,7 +60,7 @@ const Footer = () => {
               </button>
             </li>
             <li>
-              <button onClick={() => handleNavigation('/engagements')} className="hover:text-white">
+              <button onClick={() => handleNavigation('/sponsership')} className="hover:text-white">
                 Sponsorship
               </button>
             </li>

@@ -13,11 +13,11 @@ export default function Home() {
 
       <main className="flex flex-col  md:flex-row justify-between items-center gap-16 sm:gap-20 p-6 mt-5 ">
         <div className="md:flex-1">
-          <div className="flex items-center mb-4  bg-gray-200 border rounded-xl shadow p-2 w-64 sm:w-72">
-            <i> <FaAward className="text-4xl text-red-800" /></i>
-            <p className="ml-2 text-sm sm:text-base">Award winning digital service</p>
+          <div className="flex items-center mb-4  bg-gray-200 border rounded-xl shadow p-2 max-w-96">
+            <i> <FaAward className="text-2xl text-red-800" /></i>
+            <p className="ml-2 text-sm sm:text-base">An Innovative OOH Advertising Company </p>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-bold mb-4">
+          <h1 className="text-xl sm:text-xl font-bold mb-4">
             Maximize Engagement at Your Next Big Event!
           </h1>
           <p className="text-gray-600 mb-8 text-sm sm:text-base">
