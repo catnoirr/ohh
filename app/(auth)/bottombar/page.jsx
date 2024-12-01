@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
 import { useRouter, usePathname } from "next/navigation";
+import {  onAuthStateChanged } from "firebase/auth";
 import {
   FaHome,
   FaUser,
@@ -20,6 +21,7 @@ const MagicMenuIndicator = () => {
   const pathname = usePathname();
 
   useEffect(() => {
+     
     const authStatus = localStorage.getItem("authenticated") === "true";
     setIsAuthenticated(authStatus);
 
@@ -28,12 +30,23 @@ const MagicMenuIndicator = () => {
       "/about": 1,
       "/scanner": 2,
       "/CampusAmbassador": 3,
-      "/sign-in": 4,
+      "/sign-up": 4,
     };
     if (pathToIndexMap[pathname] !== undefined) {
       setActiveIndex(pathToIndexMap[pathname]);
     }
-  }, [pathname]);
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is already logged in, redirect to dashboard
+        // toast.success("Already logged in...");
+        router.push("/users"); // Adjust the route as per your application
+      }
+    });
+
+    // Clean up subscription on unmount
+    return () => unsubscribe();
+
+  }, [pathname]  ,[router]);
 
   const handleSetActive = (index, path) => {
     if (pathname !== path) {
@@ -42,19 +55,19 @@ const MagicMenuIndicator = () => {
     }
   };
 
-  const handleToggleSignIn = () => {
-    if (isAuthenticated) {
-      localStorage.setItem("authenticated", "false");
-      setIsAuthenticated(false);
-      setActiveIndex(0);
-      router.push("/");
-    } else {
-      localStorage.setItem("authenticated", "true");
-      setIsAuthenticated(true);
-      handleSetActive(4, "/sign-up");
-    }
-  };
-
+  // const handleToggleSignIn = () => {
+  //   if (isAuthenticated) {
+  //     localStorage.setItem("authenticated", "false");
+  //     setIsAuthenticated(false);
+  //     setActiveIndex(0);
+  //     router.push("/");
+  //   } else {
+  //     localStorage.setItem("authenticated", "true");
+  //     setIsAuthenticated(true);
+  //     handleSetActive(4, "/sign-up");
+  //   }
+  // };
+  
   const startScanner = async () => {
     if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
       alert("Camera access is not supported in this browser.");
@@ -166,7 +179,7 @@ const MagicMenuIndicator = () => {
           </li>
           <li
             className={`list ${activeIndex === 4 ? "active" : ""}`}
-            onClick={() => handleSetActive(3, "/sign-in")}
+            onClick={() => handleSetActive(3, "/sign-up")}
             
           >
             <a>
