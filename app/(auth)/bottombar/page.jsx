@@ -29,9 +29,9 @@ const MagicMenuIndicator = () => {
 
     const pathToIndexMap = {
       "/": 0,
-      "/about": 1,
+      "/advertise": 1,
       "/scanner": 2,
-      "/CampusAmbassador": 3,
+      "/about": 3,
       "/sign-up": 4,
     };
     if (pathToIndexMap[pathname] !== undefined) {

@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 export default function MaximumEngagement() {
+    const router = useRouter();
     return (
         <div className=" w-full text-center theme text-white  flex justify-center ">
             <div className="py-44 flex flex-col justify-center items-center  space-y-8 ">

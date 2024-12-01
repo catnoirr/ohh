@@ -10,9 +10,9 @@ const FAQs = () => {
 
   return (
     <div className="bg-gray-100   flex items-center justify-center ">
-      <div className="bg-white p-8  shadow-lg  flex flex-col sm:gap-14 sm:flex-row ">
+      <div className="bg-white p-8  shadow-lg  flex flex-col sm:gap-14 sm:flex-row py-20 ">
         <div className="flex-1">
-            <h1 className="text-2xl font-bold text-purtle-700 mb-4">Digital Marketing FAQs</h1>
+            <h1 className="text-4xl font-bold text-purtle-700 mb-4"> FAQs</h1>
         <p className="text-purtle-500 mb-6">
           As a leading digital marketing agency, we are dedicated to providing comprehensive educational resources and answering frequently asked questions to help our clients.
         </p>

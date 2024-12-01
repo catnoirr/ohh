@@ -6,12 +6,12 @@ const DigitalAgency = () => {
   return (
     <section className=" ">
       
-      <div className="flex flex-col md:flex-row items-center bg-white mt-2 md:mt-0">
+      <div className="flex flex-col md:flex-row items-center bg-white py-10  ">
         <div className="flex-1">
           <img
-            src="screenshot1.png"
+            src="giving-boost.png"
             alt="Meeting illustration"
-            className="w-full max-w-sm mx-auto md:max-w-none md:mx-0"
+            className="w-full md:max-w-lg mx-auto max-w-sm "
           />
         </div>
         <div className="flex-1 mt-6 md:mt-0 md:ml-8">
