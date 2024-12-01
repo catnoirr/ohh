@@ -11,8 +11,9 @@ const DigitalAgency = () => {
           <img
             src="giving-boost.png"
             alt="Meeting illustration"
-            className="w-full md:max-w-lg mx-auto max-w-sm "
+            className="w-full md:max-w-lg mx-auto max-w-sm absolute h-[500px] md:ml-8 "
           />
+          <img src="/turtle.png" alt="" className='relative max-w-sm left-20 top-20 '  />
         </div>
         <div className="flex-1 mt-6 md:mt-0 md:ml-8">
           <h3 className="text-4xl font-bold mb-2 p-6">Choose us for your digital journey</h3>
