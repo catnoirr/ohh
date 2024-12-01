@@ -15,7 +15,7 @@ import Feature from './components/Features'
 
 const Page = () => {
     return (
-      <div>    
+      <div className='overflow-hidden'>    
       <Hero/>
       <DigitalAgency/>
       <OurClient/>
