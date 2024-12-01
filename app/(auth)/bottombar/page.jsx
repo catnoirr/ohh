@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import "./styles.css";
+import { auth } from "@/firebase"; // Assuming you have Firebase initialized in a file called firebase.js
+
 import { useRouter, usePathname } from "next/navigation";
 import {  onAuthStateChanged } from "firebase/auth";
 import {
