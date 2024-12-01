@@ -29,8 +29,8 @@ const HowItWorks = () => {
     <section className='bg-gray-100 flex justify-center align-middle  '>
       <div className='bg-white py-12'>
       <div className="text-center mb-8">
-        <h2 className="text-5xl font-bold">
-          How it works in <span className="text-green-600">4 easy steps</span>
+        <h2 className="text-5xl font-bold p-2">
+          How it works in <span className="text-green-600">4 </span>easy steps
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

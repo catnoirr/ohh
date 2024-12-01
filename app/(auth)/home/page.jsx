@@ -10,6 +10,7 @@ import Success from './components/Success'
 import Questions from './components/Questions'
 import EventEngagement from './components/EventEngagement'
 import Campaign from './components/Campaign'
+import Feature from './components/Features'
 
 
 const Page = () => {
@@ -20,6 +21,8 @@ const Page = () => {
       <OurClient/>
       <Campaign/>
       <HowsItWork/>
+      <Feature/>
+
       {/* <div className=' my-8 '>
         <img src="./image 43.png" alt="image "  />
       </div> */}
@@ -27,6 +30,7 @@ const Page = () => {
       <Success/>
       <Questions/>
       <EventEngagement/>
+
       </div>
     );
   };
