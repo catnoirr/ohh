@@ -148,7 +148,7 @@ const MagicMenuIndicator = () => {
           </li>
           <li
             className={`list ${activeIndex === 1 ? "active" : ""}`}
-            onClick={() => handleSetActive(1, "/about")}
+            onClick={() => handleSetActive(1, "/advertise")}
           >
             <a>
               <span className="icon">
@@ -170,7 +170,7 @@ const MagicMenuIndicator = () => {
           </li>
           <li
             className={`list ${activeIndex === 3 ? "active" : ""}`}
-            onClick={() => handleSetActive(3, "/CampusAmbassador")}
+            onClick={() => handleSetActive(3, "/about")}
           >
             <a>
               <span className="icon">

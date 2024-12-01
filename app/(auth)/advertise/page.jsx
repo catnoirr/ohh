@@ -1,21 +1,27 @@
 import React from 'react';
 import FrontPage from './components/FrontPage';
-import Features from './components/Feature';
+import Features from '../about/components/Featured';
 import Review from './components/ReviewPage';
 import FAQ from './components/faq';
 import NewWay from './components/NewWay';
-import WorkWithUs from "./components/WorkWithUs";
+import Services from "../CampusAmbassador/components/Services"
+import HowItWork from "../CampusAmbassador/components/HowItWorks"
+import RecentCaseStudy from "../casestudy/components/RecentBlog"
+import MaximumEngagement from './components/MaximumEngagement';
 
 const JoinComunity = () => {
     return (
-        <div>
-           
+        <div className='space-y-4'>
             <FrontPage />
             <Features />
+            <Services />
+            <HowItWork />
+            <RecentCaseStudy  />
+
             <Review />
             <NewWay />
             <FAQ />
-            <WorkWithUs />
+            <MaximumEngagement />
 
         </div>
     );

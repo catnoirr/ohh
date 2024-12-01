@@ -10,14 +10,13 @@ import Image from 'next/image';
 
 const Testimonials = () => {
   return (
-    <section className="  px-6 md:px-6 lg:px-6 sm:mt-28 mt-5 py-8">
+    <section className="  px-6 md:px-6 lg:px-6 sm:mt-28 mt-5 py-16 theme text-white">
       <div className=" flex flex-col md:flex-row gap-8 ">
         
         {/* Left Content - Testimonials Carousel */}
         <div className="md:w-1/2">
-        <p className='w-64 rounded-xl bg-gray-100  p-3'>💖 Real results from real clients</p>
-          <h2 className="text-3xl font-bold text-gray-900 py-6">See how we've helped our clients succeed</h2>
-          <p className="text-gray-600 mb-8">More than 1500+ agencies using Mizzle</p>
+          <h2 className="text-3xl font-bold  py-6">See how we've helped our clients succeed</h2>
+          <p className="font-thin mb-8">More than 1500+ agencies using Mizzle</p>
 
           <Swiper
             modules={[Pagination, Navigation, Autoplay]}
@@ -41,7 +40,7 @@ const Testimonials = () => {
                         ))}
                       </div>
                     </div>
-                    <p className="text-gray-700 mb-4">
+                    <p className=" mb-4">
                       ""Excellent Theme, will recommend to others!."
                     </p>
                     <div className="flex items-center space-x-4">
@@ -62,7 +61,7 @@ const Testimonials = () => {
                         ))}
                       </div>
                     </div>
-                    <p className="text-gray-700 mb-4">
+                    <p className=" mb-4">
                       "Great support and excellent product quality!"
                     </p>
                     <div className="flex items-center space-x-4">
@@ -103,7 +102,7 @@ const Testimonials = () => {
                 />
                
               </div>
-              <span className="text-xs sm:text-sm font-semibold">The best Bootstrap theme we've ever used </span>
+              <span className="text-xs sm:text-sm font-semibold">Best Services at Ohhpoint </span>
               
             </div>
 
