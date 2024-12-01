@@ -25,10 +25,10 @@ const FeaturesSection = () => {
       </h1>
 
       {/* Toggle Buttons */}
-      <div className="flex justify-center gap-4 mb-6">
+      <div className="flex  md:flex-row justify-center gap-4 mb-6 flex-wrap">
         {/* Analytics Button */}
         <button
-          className={`px-4 py-2 rounded-lg font-medium transition ${
+          className={`px-2 py-2 text-xs md:text-sm  rounded-lg font-medium transition  ${
             isActiveAnalytics
               ? "bg-green-500 text-black"
               : "bg-gray-800 hover:bg-gray-700"
@@ -40,7 +40,7 @@ const FeaturesSection = () => {
 
         {/* Collaboration Button */}
         <button
-          className={`px-4 py-2 rounded-lg font-medium transition ${
+          className={`px-2 py-2 text-xs md:text-sm  rounded-lg font-medium transition ${
             isActiveCollaboration
               ? "bg-green-500 text-black"
               : "bg-gray-800 hover:bg-gray-700"
@@ -52,7 +52,7 @@ const FeaturesSection = () => {
 
         {/* Automation Button */}
         <button
-          className={`px-4 py-2 rounded-lg font-medium transition ${
+          className={`px-2 py-2 text-xs md:text-sm  rounded-lg font-medium transition ${
             isActiveAutomation
               ? "bg-green-500 text-black"
               : "bg-gray-800 hover:bg-gray-700"
@@ -60,12 +60,12 @@ const FeaturesSection = () => {
           onClick={() => handleTabClick("Automation")}
         >
           Automation{" "}
-          <span className="text-red-500 text-xs ml-2">(Coming soon)</span>
+          <span className="text-red-500 text-xs ml-2 hidden md:block">(Coming soon)</span>
         </button>
 
         {/* Scalability Button */}
         <button
-          className={`px-4 py-2 rounded-lg font-medium transition ${
+          className={`px-2 py-2 text-xs md:text-sm rounded-lg font-medium transition ${
             isActiveScalability
               ? "bg-green-500 text-black"
               : "bg-gray-800 hover:bg-gray-700"
