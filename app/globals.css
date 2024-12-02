@@ -287,3 +287,15 @@ opacity: 0px;
     background: linear-gradient(254.44deg, #341266 -29.87%, #6825CC 55.16%);
   
   }
+  /* .video{
+    width: 300px;
+    height: 500px;
+  } */
+   .eligible{
+    background: linear-gradient(90deg, #341266 0%, rgba(84, 56, 127, 0.983898) 0.01%, rgba(228, 223, 235, 0.913334) 84.1%, rgba(255, 255, 255, 0.9) 99.99%, rgba(255, 255, 255, 0) 100%);
+
+   }
+   .mission{
+    background: linear-gradient(180deg, #381669 0%, #FFFFFF 100%);
+
+   }

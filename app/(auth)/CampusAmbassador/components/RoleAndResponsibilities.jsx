@@ -4,19 +4,19 @@ import { FaCheck } from 'react-icons/fa';
 
 const RoleAndResponsibilities = () => {
   return (
-    <section className="md:px-14 px-8 py-8 bg-white  ">
+    <section className="md:px-14 px-8  bg-white  ">
       {/* <div className=" mb-4">
         <h2 className="text-5xl font-semibold text-purtle-700">Role & Responsibilities</h2>
       </div> */}
-      <div className="flex flex-col md:flex-row items-center bg-white p-6 shadow-lg">
+      <div className="flex flex-col md:flex-row items-center bg-white py-6  ">
         <div className="flex-1">
           <img
-            src="screenshot1.png"
+            src="ambassador.png"
             alt="Meeting illustration"
-            className="w-full max-w-sm mx-auto md:max-w-none md:mx-0"
+            className="w-full max-w-sm mx-auto md:max-w-none md:mx-0 "
           />
         </div>
-        <div className="flex-1 mt-6 md:mt-0 md:ml-8">
+        <div className="flex-1  md:mt-0 md:ml-8 shadow-md py-20 md:px-10">
           <h3 className="text-4xl font-bold mb-2 p-6">Choose us for your digital journey</h3>
           <p className="text-gray-600 mb-4 pl-6">
             Our commitment to excellence, expertise in cutting-edge technologies, and dedication to client.

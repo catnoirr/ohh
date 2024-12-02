@@ -52,9 +52,9 @@ const CampusImpact = () => {
         {/* Right content - Image with overlay */}
         <div className="lg:w-1/2 relative flex justify-center">
           <img
-            src="newpic.png" // replace with the actual path to your image
+            src="/turtleji.png" // replace with the actual path to your image
             alt="Laptop with notebook"
-            className="w-full h-auto md:w-[500px] lg:w-[666px] object-cover "
+            className="w-full   object-cover "
           />
          
         </div>

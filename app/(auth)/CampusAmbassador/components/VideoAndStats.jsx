@@ -1,43 +1,72 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from "react";
+import { FaPlay, FaPause } from "react-icons/fa";
 
 const VideoAndStats = () => {
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  const videoSources = [
+    { index: 0, src: "/default.mp4" },
+    { index: 1, src: "/default.mp4" },
+    { index: 2, src: "/default.mp4" },
+    { index: 3, src: "/default.mp4" },
+  ];
+
+  const handlePlayPause = (index) => {
+    const videos = document.querySelectorAll("video");
+
+    videos.forEach((video, i) => {
+      if (i === index) {
+        if (video.paused) {
+          video.play();
+          setCurrentVideoIndex(index);
+          setIsVideoPlaying(true);
+        } else {
+          video.pause();
+          setIsVideoPlaying(false);
+        }
+      } else {
+        video.pause();
+      }
+    });
+  };
+
   return (
-    <section className="bg-white py-12 ">
-      {/* Video Section */}
-      <div className="w-full  mx-auto bg-white gap-16 flex justify-around items-center mb-8 videos md:flex-row flex-col">
-        <video src="#"></video>
-        <video src="#"></video>
-        <video src="#"></video>
-        <video src="#"></video>
-
+    <section className="py-12 md:px-14 px-6">
+      <div className="flex gap-8 mx-auto overflow-x-auto scrollbar-hide">
+        {videoSources.map((video, index) => (
+          <div
+            key={video.index}
+            className="relative w-full md:min-w-[200px] min-w-[300px]"
+          >
+            <video
+              src={video.src}
+              muted={false}
+              loop={false}
+              className="w-full rounded"
+              onClick={() => handlePlayPause(index)}
+            />
+            {!(isVideoPlaying && currentVideoIndex === index) && (
+              <button
+                type="button"
+                className="absolute inset-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white text-4xl"
+                onClick={() => handlePlayPause(index)}
+              >
+                {isVideoPlaying && currentVideoIndex === index ? (
+                  <FaPause />
+                ) : (
+                  <FaPlay />
+                )}
+              </button>
+            )}
+          </div>
+        ))}
       </div>
-
-      {/* Statistics Section */}
-      {/* <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 bg-white p-8    ">
-  <div className="flex flex-col items-center">
-    <p className="text-7xl font-bold text-black">
-      <span className="text-green-600">{'>'}</span>30K
-    </p>
-    <p className="text-gray-600">Worldwide client</p>
-  </div>
-  
-  <div className="flex flex-col items-center">
-    <p className="text-7xl font-bold text-black">
-      99<span className="text-green-600">%</span>
-    </p>
-    <p className="text-gray-600">Analyze business reports</p>
-  </div>
-  
-  <div className="flex flex-col items-center">
-    <p className="text-7xl font-bold text-black">
-      350<span className="text-green-600">+</span>
-    </p>
-    <p className="text-gray-600">Worldwide projects</p>
-  </div>
-</div> */}
-
     </section>
   );
 };
 
 export default VideoAndStats;
+

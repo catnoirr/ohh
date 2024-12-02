@@ -2,16 +2,16 @@ import React from 'react';
 
 const CampusImpact = () => {
   return (
-    <div className="flex flex-col items-center  min-h-screen p-4 md:p-8">
+    <div className="flex flex-col items-center  min-h-screen  md:p-8">
       {/* Main container with left and right content */}
-      <div className="flex flex-col-reverse lg:flex-row items-start w-full max-w-7xl p-4 md:p-8 rounded-lg space-y-8 lg:space-y-0 lg:space-x-8">
+      <div className="flex flex-col-reverse lg:flex-row items-start w-full max-w-7xl p-2 md:p-8 md:pl-0 rounded-lg space-y-8 lg:space-y-0 lg:space-x-8">
 
           {/* Right content - Image with overlay */}
-          <div className="lg:w-1/2 relative flex justify-center">
+          <div className="lg:w-1/2 relative ">
           <img
-            src="brand.png" // replace with the actual path to your image
+            src="about-advertise.png" // replace with the actual path to your image
             alt="Laptop with notebook"
-            className="w-full h-auto md:w-[500px] lg:w-[666px] object-cover "
+            className="w-full  "
           />
         
         </div>

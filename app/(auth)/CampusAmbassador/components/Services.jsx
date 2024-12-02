@@ -41,13 +41,13 @@ const Services = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center bg-white min-h-screen p-8">
+    <div className="flex flex-col items-center bg-white min-h-screen p-8 py-14">
       <h1 className="text-3xl font-semibold text-gray-900 mb-8">
         Our Comprehensive Services
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full">
         {services.map((service, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
             <div className="text-4xl text-green-500 mb-4">
               {service.icon}
             </div>
@@ -57,9 +57,7 @@ const Services = () => {
             <p className="text-gray-600 mb-4">
               {service.description}
             </p>
-            <a href="#" className="text-green-500 font-semibold hover:underline">
-              {service.linkText} &rarr;
-            </a>
+            
           </div>
         ))}
       </div>

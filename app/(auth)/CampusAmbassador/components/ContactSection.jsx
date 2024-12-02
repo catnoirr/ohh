@@ -3,38 +3,23 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const ContactSection = () => {
   return (
-    <div className="flex justify-center  px-4 md:px-8 py-8">
-      <div className="bg-purtle-700 text-white p-8 md:p-12  flex flex-col md:flex-row items-center justify-between w-full  space-y-8 md:space-y-0 md:space-x-8  ">
+    <div className="flex justify-center  px-4 md:px-20 py-8 ">
+      <div className="bg-purtle-700 text-white  md:pl-32  flex  md:flex-row items-center justify-between w-full  space-y-8 md:space-y-0 md:space-x-8  mission rounded-3xl relative top-14">
         
         {/* Left section - Heading and input box */}
-        <div className="flex-1 max-w-md text-center md:text-left">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to work with us?</h2>
-          <div className="flex flex-col md:flex-row items-center bg-white rounded-xl overflow-hidden shadow-md p-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-grow p-3 text-gray-700 focus:outline-none rounded-md md:rounded-none"
-            />
-            <button className="bg-black text-white px-6 py-3 font-semibold w-full md:w-auto mt-2 md:mt-0 rounded-md">
-              Subscribe
+        <div className="flex-1 max-w-md text-center md:text-left p-10 md:p-0">
+          <h2 className="text-xl md:text-3xl font-base   mb-4">Are you Looking for Sponsership</h2>
+          <div className="flex flex-col md:flex-row items-center  overflow-hidden  p-2">
+           
+            <button className="bg-oohpoint-primary-3 text-white px-6 py-3  w-full md:w-auto mt-2 md:mt-0 rounded-md">
+              Apply Now
             </button>
           </div>
         </div>
 
         {/* Right section - Contact info */}
-        <div className="text-gray-300 space-y-4 text-center md:text-left">
-          <div className="flex items-center  md:justify-start">
-            <FaPhoneAlt className="mr-2" />
-            <span>(406) 555-0120</span>
-          </div>
-          <div className="flex items-center  md:justify-start">
-            <FaEnvelope className="mr-2" />
-            <span>mangcoding123@gmail.com</span>
-          </div>
-          <div className="flex items-center  md:justify-start">
-            <FaMapMarkerAlt className="mr-2" />
-            <span>2972 Westheimer Rd. Santa Ana, Illinois 85486</span>
-          </div>
+        <div className="text-gray-300  text-center md:text-left">
+         <img src="/net.png" alt="" className='max-w-xs hidden md:block'/>
         </div>
       </div>
     </div>

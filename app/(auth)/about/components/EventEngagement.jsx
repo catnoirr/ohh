@@ -10,10 +10,10 @@ function EventEngagement() {
         Explore our focused communities designed to cater to different professional needs
       </p>
       <div className="flex space-x-4 mb-8">
-        <button className="bg-black text-white py-2 px-4 rounded-lg">
-          Request a free consultation
+        <button className="bg-oohpoint-primary-3 text-white py-2 px-4 rounded">
+          Apply for Schlorship
         </button>
-        <button className="bg-gray-200 text-black py-2 px-4 rounded-lg">
+        <button className=" text-black py-2 px-4 border rounded">
           Learn More
         </button>
       </div>

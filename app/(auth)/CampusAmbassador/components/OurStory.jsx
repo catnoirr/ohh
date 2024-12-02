@@ -2,7 +2,7 @@ import React from 'react';
 import { FaFileAlt, FaStar, FaBookmark } from 'react-icons/fa';
 const StorySection = () => {
   return (
-    <div className="flex flex-col items-center  bg-white">
+    <div className="flex flex-col   eligible">
 
 
 
@@ -11,15 +11,14 @@ const StorySection = () => {
      
 
       {/* Promotional Offer Section */}
-      <div className="flex flex-col lg:flex-row items-start lg:items-center w-full max-w-6xl mt-4 sm:mt-8 gap-8 py-10 ">
-        <div className="flex lg:mb-0 w-full lg:w-1/2 mt-20 md:justify-center ">
-        <img src="ring.png" alt="" className='w-60' />
-          <img src="./Group (2).png" alt="advertising pic" className="w-60 relative right-40 bottom-20" />
+      <div className="flex flex-col lg:flex-row items-start lg:items-center w-full  gap-8  ">
+        <div className="flex lg:mb-0 w-full  mt-20 md:justify-center ">
+        <img src="eligibility.png" alt="" />
         </div>
 
         {/* Guiding Principles */}
-        <div className="w-full p-8">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Our Guiding Principles</h2>
+        <div className="w-full p-8 space-y-10">
+          <h2 className="text-2xl sm:text-5xl font-medium mb-4">Eligibility Criteria</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Innovation */}
             <div className="flex items-start space-x-4">

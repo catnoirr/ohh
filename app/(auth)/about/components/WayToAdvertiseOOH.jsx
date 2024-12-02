@@ -4,15 +4,15 @@ import { FaFileAlt, FaStar, FaBookmark } from 'react-icons/fa';
 
 const StorySection = () => {
   return (
-    <div className="flex flex-col md:flex-row  items-center p-8 bg-white gap-10">
+    <div className="flex flex-col md:flex-row  items-center p-8 py-20 theme gap-10">
     
 
       {/* Promotional Offer Section */}
-      <div className="flex flex-col items-start lg:items-center max-w-2xl  mt-8">
+      <div className="flex flex-col items-start lg:items-center max-w-2xl  mt-8 ">
         
  <div className="text-left ">
-        <h1 className="text-5xl font-medium  mb-8">A New way to Advertise OOH</h1>
-        <p className="text-gray-600 mb-8">
+        <h1 className="text-5xl font-medium  mb-8 text-white">A New way to Advertise OOH</h1>
+        <p className=" mb-8 text-white">
         Oohpoint offers a unique approach to offline advertising that addresses the limitations of traditional ads. We give brands
         </p>
       </div>
@@ -26,7 +26,7 @@ const StorySection = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Real-Time Analytics</h3>
-                <p className="text-gray-600 text-sm"> Know exactly how your campaign is performing with real-time data and insights.</p>
+                <p className=" text-sm"> Know exactly how your campaign is performing with real-time data and insights.</p>
               </div>
             </div>
             <div className="flex  space-x-4">
@@ -35,7 +35,7 @@ const StorySection = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Engagement & Reward</h3>
-                <p className="text-gray-600 text-sm">Make every interaction count by offering users discounts and incentives, creating more </p>
+                <p className=" text-sm">Make every interaction count by offering users discounts and incentives, creating more </p>
               </div>
             </div>
             <div className="flex  space-x-4">
@@ -44,7 +44,7 @@ const StorySection = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-lg">User-Centricity</h3>
-                <p className="text-gray-600 text-sm">We prioritize the experience of both the brands we serve and the consumers who engage with the ads.</p>
+                <p className=" text-sm">We prioritize the experience of both the brands we serve and the consumers who engage with the ads.</p>
               </div>
             </div>
             <div className="flex  space-x-4">
@@ -53,15 +53,15 @@ const StorySection = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Collaboration</h3>
-                <p className="text-gray-600 text-sm">Building strong partnerships with vendors, brands, and users to create a cohesive advertising ecosystem.</p>
+                <p className=" text-sm">Building strong partnerships with vendors, brands, and users to create a cohesive advertising ecosystem.</p>
               </div>
             </div>
           </div>
         </div>
         
       </div>
-      <div className="  flex flex-col justify-between mb-8 lg:mb-0 lg:mr-8 w-full lg:w-1/2 p-8 md:mt-20">
-          <img src="./tape.png" alt="advertising pic" className='md:mt-8'/>
+      <div className="  flex flex-col justify-between mb-8  w-full  md:mt-20 theme">
+          <img src="qrscanner.png" alt="advertising pic" />
         </div>
     </div>
   );

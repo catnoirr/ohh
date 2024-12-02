@@ -2,7 +2,7 @@ import React from 'react';
 import { FaFileAlt, FaStar, FaBookmark } from 'react-icons/fa';
 const StorySection = () => {
   return (
-    <div className="flex flex-col items-center p-4 sm:p-8 bg-white">
+    <div className="flex flex-col items-center p-6 sm:p-8 bg-white ">
 
 
 
@@ -21,9 +21,8 @@ const StorySection = () => {
 
       {/* Promotional Offer Section */}
       <div className="flex flex-col lg:flex-row items-start lg:items-center w-full max-w-6xl mt-4 sm:mt-8 gap-8">
-        <div className="flex lg:mb-0 w-full lg:w-1/2 mt-20 md:justify-center">
-        <img src="ring.png" alt="" className='w-60' />
-          <img src="./Group (2).png" alt="advertising pic" className="w-60 relative right-40 bottom-20" />
+        <div className="flex lg:mb-0 w-full lg:w-1/2  md:justify-center">
+        <img src="ourstory.png" alt=""  />
         </div>
 
         {/* Guiding Principles */}

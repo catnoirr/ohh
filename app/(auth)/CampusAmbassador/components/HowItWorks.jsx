@@ -26,14 +26,14 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className='bg-white flex justify-center align-middle md:px-14 px-8 '>
-      <div className='bg-white py-12 shadow-lg'>
+    <section className=' flex justify-center align-middle md:px-14 px-8 border-b shadow-xl'>
+      <div className='bg-white py-12 '>
       <div className="text-center mb-8">
         <h2 className="text-5xl font-bold">
           How it works in <span className="text-green-600">4 easy steps</span>
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-14">
         {steps.map((step, index) => (
           <div
             key={index}

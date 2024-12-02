@@ -10,15 +10,18 @@ import OurStory from './components/OurStory'
 import FAQ from './components/Faq'
 import Solved from './components/Solved'
 import ContactSection from './components/ContactSection'
+import Colleges from "./components/Colleges"
 const Page = () => {
   return (
     <div className='bg-white'>
       <CampusAmbassadorProgram />
+      <Colleges/>
       <CampusImpact/>
       <Services/>
       <RoleAndResponsibility/>
-      <HowItWorks/>
       <OurStory/>
+
+      <HowItWorks/>
       <VideoAndStats/>
       <Solved/>
       <FAQ/>
