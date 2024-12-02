@@ -155,11 +155,13 @@ const SignUp = () => {
 </div>
 
 <button className="flex items-center justify-center   bg-transparent border border-white">
-        <img
+        {/* <img
           src="/googlelogo.png"
           alt="Google Logo"
           className=" border-r border-[#ACA9A9] w-14 p-2"
-        />
+        /> */}
+                <Image src="/googlelogo.png" height={14} width={54} alt="Logo" className=" border-r border-[#ACA9A9] w-14 p-2" />
+
         <span className="ml-3 text-[#BAB3B3] font-medium flex-1">Sign Up with Google</span>
       </button>
           <p className="text-center py-6">By signing in you accept the <span  className="  cursor-pointer text-[#567EFF]">terms of Services</span> and <span  className="  cursor-pointer text-[#567EFF]">Privacy Policy</span> </p>
