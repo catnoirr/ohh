@@ -160,7 +160,7 @@ const SignUp = () => {
           alt="Google Logo"
           className=" border-r border-[#ACA9A9] w-14 p-2"
         /> */}
-                <Image src="/googlelogo.png" height={14} width={54} alt="Logo" className=" border-r border-[#ACA9A9] w-14 p-2" />
+                <Image src="/Googlelogo.png" height={14} width={54} alt="Logo" className=" border-r border-[#ACA9A9] w-14 p-2" />
 
         <span className="ml-3 text-[#BAB3B3] font-medium flex-1">Sign Up with Google</span>
       </button>
