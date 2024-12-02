@@ -43,6 +43,7 @@ const MagicMenuIndicator = () => {
       "/advertise": 1,
       "/scanner": 2,
       "/about": 3,
+      "/sign-in": 4,
       "/sign-up": 4,
     };
     if (pathToIndexMap[pathname] !== undefined) {

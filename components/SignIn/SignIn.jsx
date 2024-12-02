@@ -54,43 +54,44 @@ const SignIn = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full">
+    <div className="relative w-full bg-[#381D61] " id="section3">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-oohpoint-primary-1"></div>
+      <div className="  bg-[#381D61]"></div>
 
       {/* Background Image */}
-      <div
+      {/* <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{ backgroundImage: `url('/bg-signin.png')` }}
-      ></div>
+      ></div> */}
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center items-center min-h-screen w-full text-white">
+      <div className="relative z-10 flex flex-col justify-center items-center py-24 pb-40   w-full text-white">
         {/* Logo */}
         <Image src={logo} height={100} width={100} alt="Logo" />
 
         {/* Form Container */}
-        <div className="bg-white p-5 lg:p-12 rounded-lg shadow-lg w-full max-w-lg mt-8">
-          <h2 className="text-sm font-bold text-center mb-6 text-[#666666]">
+        <div className=" p-5 lg:p-12 rounded-lg  w-full max-w-lg mt-8">
+          {/* <h2 className="text-sm font-bold text-center mb-6 text-[#666666]">
             Please fill in your unique admin login details below
-          </h2>
+          </h2> */}
 
           {/* Form */}
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             {/* Email Field */}
             <div className="text-black">
-              <label
+              {/* <label
                 htmlFor="email"
                 className="block text-sm font-medium text-[#666666]"
               >
                 Email Address
-              </label>
+              </label> */}
               <input
                 type="email"
                 id="email"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-oohpoint-grey-200 mt-2 border-none"
-                placeholder="Enter your email"
+                className="w-full px-3 py-4 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-oohpoint-grey-200 mt-2 border-none shadow-lg "
+                placeholder="Email"
                 required
+               
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -98,32 +99,24 @@ const SignIn = () => {
 
             {/* Password Field */}
             <div className="text-black">
-              <label
+              {/* <label
                 htmlFor="password"
                 className="block text-sm font-medium text-[#666666]"
               >
                 Password
-              </label>
+              </label> */}
               <input
                 type="password"
                 id="password"
-                className="bg-oohpoint-grey-200 mt-2 w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent border-none"
-                placeholder="Enter your password"
+                className="bg-oohpoint-grey-200 mt-2 w-full px-3 py-4 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent border-none shadow-lg"
+                placeholder="Password"
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
 
-            <div
-              onClick={() => router.push("/forget-password")}
-              className="w-full flex md:justify-end cursor-pointer"
-            >
-              <h3 className="text-sm font-medium text-[#666666]">
-                Forgot Password?
-              </h3>
-            </div>
-
+           
             {/* Error Message */}
             {errorMessage && (
               <p className="text-red-500 text-sm text-center">{errorMessage}</p>
@@ -132,19 +125,45 @@ const SignIn = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full py-3 mt-6 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
+              className="w-full py-4 mt-6 submit-button hover:bg-purple-700 text-white font-semibold  shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
               disabled={loading}
             >
-              {loading ? "Signing in..." : "Sign In"}
+              {loading ? "Loging in..." : "Log In"}
             </button>
+            <div
+              onClick={() => router.push("/forget-password")}
+              className="w-full flex justify-center cursor-pointer"
+            >
+              <h3 className="text-sm font-medium text-[#567EFF]">
+                Forgot Password?
+              </h3>
+            </div>
+            <div class="flex items-center">
+  <hr class="flex-1 border-[#B2B0B0]" />
+  <span class="px-2 text-[#B2B0B0]">or</span>
+  <hr class="flex-1 border-[#B2B0B0]" />
+</div>
+   {/* Google authentication */}
+
+   
+      <button className="flex items-center justify-center   bg-transparent border border-white">
+        <img
+          src="/googlelogo.png"
+          alt="Google Logo"
+          className=" border-r border-[#ACA9A9] w-14 p-2"
+        />
+        <span className="ml-3 text-[#BAB3B3] font-medium flex-1">Log In with Google</span>
+      </button>
+     
+
           </form>
-          <h2 className="text-sm font-bold text-center mt-6 text-[#666666]">
-            Don't have an account?{" "}
+          <h2 className="text-sm font-bold text-center mt-6 text-white">
+            Don't have an account?{" "} 
             <span
-              className=" pl-4 cursor-pointer"
+              className="pl-1  cursor-pointer text-[#567EFF]"
               onClick={() => router.push("/sign-up")}
             >
-              Sign Up
+             Sign Up
             </span>
           </h2>
         </div>

@@ -7,9 +7,17 @@
     background-color: white;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
+.bottombar-container.section3-style {
+    background-color: #381D61;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
 
 .indicator.section1-style{
     border: 6px solid black;
+    transition: border-color 0.3s ease;
+}
+.indicator.section3-style{
+    border: 6px solid #381D61;
     transition: border-color 0.3s ease;
 }
 .indicator.section1-style::after
@@ -20,6 +28,14 @@
     box-shadow:  -1px -10px 0 0 black;
     transition: all 0.3s ease;
 }
+.indicator.section3-style::after
+{
+    
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow:  -1px -10px 0 0 #381D61;
+    transition: all 0.3s ease;
+}
 .indicator.section1-style::before{
   
     background: transparent;
@@ -28,13 +44,32 @@
     transition: all 0.3s ease;
 
 }
+.indicator.section3-style::before{
+  
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow:  1px -10px 0 0 #381D61;
+    transition: all 0.3s ease;
+
+}
 .navigation.section1-style{
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.navigation.section3-style{
     background-color: white;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .navigation.section1-style .icon {
     color: black;
 }
+.navigation.section3-style .icon {
+    color: black;
+}
 .navigation.section1-style .text{
     color: black;
 }
+.navigation.section3-style .text{
+    color: black;
+}
+

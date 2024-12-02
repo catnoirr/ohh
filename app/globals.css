@@ -279,3 +279,11 @@ opacity: 0px;
     background: linear-gradient(180deg, #41169A 0%, #D6D6D6 163.16%);
 
   }
+  input::placeholder {
+    color: #aaa; /* Placeholder text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow properties */
+  }
+  .submit-button{
+    background: linear-gradient(254.44deg, #341266 -29.87%, #6825CC 55.16%);
+  
+  }
