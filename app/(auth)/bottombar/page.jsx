@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import "./styles.css";
+import "./dynamic.css";
 import { auth } from "@/firebase"; // Assuming you have Firebase initialized in a file called firebase.js
 
 import { useRouter, usePathname } from "next/navigation";
@@ -16,6 +17,15 @@ import {
 import jsQR from "jsqr";
 
 const MagicMenuIndicator = () => {
+
+
+  const [activeClass, setActiveClass] = useState("default"); 
+  const sections = [
+    { id: "section1", className: "section1-style" },
+    { id: "section2", className: "section2-style" },
+    { id: "section3", className: "section3-style" },
+  ];
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [scannerActive, setScannerActive] = useState(false);
@@ -23,6 +33,7 @@ const MagicMenuIndicator = () => {
   const pathname = usePathname();
 
   useEffect(() => {
+    
      
     const authStatus = localStorage.getItem("authenticated") === "true";
     setIsAuthenticated(authStatus);
@@ -44,11 +55,52 @@ const MagicMenuIndicator = () => {
         router.push("/users"); // Adjust the route as per your application
       }
     });
+    //minor ok
+    const handleScroll = () => {
+      const viewportHeight = window.innerHeight;
+
+      // Default class when no section is in view
+      let updatedClass = "default";
+
+      for (const section of sections) {
+        const sectionElement = document.getElementById(section.id);
+
+        if (sectionElement) {
+          const { top, bottom } = sectionElement.getBoundingClientRect();
+
+          // Check if any part of the section is in the viewport
+          if (
+            (top >= 0 && top < viewportHeight) || // Top part is in view
+            (bottom > 0 && bottom <= viewportHeight) || // Bottom part is in view
+            (top < 0 && bottom > viewportHeight) // Section spans the viewport
+          ) {
+            updatedClass = section.className;
+            break;
+          }
+        }
+      }
+
+      // Update the active class only if it changes
+      if (activeClass !== updatedClass) setActiveClass(updatedClass);
+    };
+
+    // Attach the scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Initial call to set the styles based on the starting position
+    handleScroll();
+
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      unsubscribe();
+    };
 
     // Clean up subscription on unmount
-    return () => unsubscribe();
+     
 
-  }, [pathname]  ,[router]);
+  }, [pathname]  ,[router],[activeClass, sections]);
 
   const handleSetActive = (index, path) => {
     if (pathname !== path) {
@@ -132,8 +184,8 @@ const MagicMenuIndicator = () => {
   };
 
   return (
-    <div className="bottombar-container">
-      <div className="navigation mt-16">
+    <div className={`bottombar-container  ${activeClass}`} style={{ transition: 'background-color 0.3s ease' }}>
+      <div className={`navigation mt-16  ${activeClass}`}>
         <ul>
           <li
             className={`list ${activeIndex === 0 ? "active" : ""}`}
@@ -194,8 +246,8 @@ const MagicMenuIndicator = () => {
             </a>
           </li>
           <div
-            className="indicator"
-            style={{ transform: `translateX(calc(70px * ${activeIndex}))` }}
+             className={`indicator  ${activeClass}`}
+            style={{ transform: `translateX(calc(70px * ${activeIndex}))` , transition: 'background-color 0.3s ease', }}
           ></div>
         </ul>
       </div>

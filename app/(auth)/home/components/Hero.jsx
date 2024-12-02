@@ -24,7 +24,7 @@ const AdvertisingBanner = () => {
   const router = useRouter();
   return (
     
-    <div className="flex flex-col  p-4  theme ">
+    <div className="flex flex-col  p-4  theme " >
 
 
        <div className='flex justify-between md:flex-row flex-col md:py-16 py-6  ' >

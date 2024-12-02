@@ -1,0 +1,40 @@
+.bottombar-container.section1-style {
+    background-color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+  }
+.bottombar-container.section2-style {
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+.indicator.section1-style{
+    border: 6px solid black;
+    transition: border-color 0.3s ease;
+}
+.indicator.section1-style::after
+{
+    
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow:  -1px -10px 0 0 black;
+    transition: all 0.3s ease;
+}
+.indicator.section1-style::before{
+  
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow:  1px -10px 0 0 black;
+    transition: all 0.3s ease;
+
+}
+.navigation.section1-style{
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.navigation.section1-style .icon {
+    color: black;
+}
+.navigation.section1-style .text{
+    color: black;
+}

@@ -11,6 +11,7 @@
     --clr: white;
    
 }
+
 .bottombar-container{
     position: fixed;
     bottom: 0;
@@ -20,6 +21,7 @@
     background: white;
     border-radius: 5px 5px 0 0;
     z-index: 1000; /* Ensure it's above other content */
+    
 
 }
 
@@ -129,7 +131,7 @@
     height: 20px;
     background: transparent;
     border-top-right-radius: 20px;
-    box-shadow:  1px -10px 0 0 var(--clr);
+    box-shadow:  1px -10px 0 0 #fff;
 }
 
 .indicator::after {

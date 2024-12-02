@@ -4,7 +4,7 @@ import { FaCheck } from 'react-icons/fa';
 
 const DigitalAgency = () => {
   return (
-    <section className=" ">
+    <section className=" " >
       
       <div className="flex flex-col md:flex-row items-center bg-white py-10  ">
         <div className="flex-1">
