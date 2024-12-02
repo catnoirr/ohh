@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { auth } from "@/firebase"; // Assuming you have Firebase initialized in a file called firebase.js
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import toast from "react-hot-toast";
+import { FaGoogle } from "react-icons/fa";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
