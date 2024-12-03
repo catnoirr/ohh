@@ -26,7 +26,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className=' flex justify-center align-middle md:px-14 px-8 border-b shadow-xl'>
+    <section className=' flex justify-center align-middle md:px-14 px-8 border-b shadow-md'>
       <div className='bg-white py-12 '>
       <div className="text-center mb-8">
         <h2 className="text-5xl font-bold">
