@@ -204,7 +204,7 @@ const Campaigns = () => {
         </button>
         <div className="overflow-x-auto max-h-full">
   <div
-    className="grid grid-flow-col grid-rows-1 auto-cols-[minmax(250px,_350px)] "
+    className="grid grid-flow-col grid-rows-1 auto-cols-[minmax(250px,_330px)] "
     style={{ width: "max-content" }}
   >
     {currentOngoingCampaigns.map((campaign) => (
@@ -248,11 +248,11 @@ const CampaignCard = ({ campaign }) => {
   };
 
   return (
-    <div className="border rounded-lg shadow-lg overflow-hidden relative max-w-xs ">
-      <img src={campaign.img} alt={campaign.title} className="w-full h-40 object-cover" />
+    <div className="border rounded-lg shadow-lg overflow-hidden relative max-w-[300px] ">
+      <img src={campaign.img} alt={campaign.title} className="w-full h-40 object-cover rounded-sm" />
 
       <div className="p-4 ">
-        <div className="flex justify-between">
+        <div className="flex justify-between  border-b">
           <div>
           <h3 className="text-2xl font-semibold text-purple-600 cursor-pointer" 
             onClick={(e) => {

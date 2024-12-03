@@ -76,10 +76,15 @@ const AdvertisingBanner = () => {
         </div>
       )}
         </div>
-        <div className="flex justify-start gap-2 mt-4 md:text-sm text-xs text-white">
-          <div className='flex items-center gap-2'><FaCheck className='bg-green-800 text-white p-1 rounded-full'/> Boost Event Buzz</div>
-          <div className='flex items-center gap-2'><FaCheck className='bg-green-800 text-white p-1 rounded-full'/>  Boost Event Buzz</div>
-          <div className='flex items-center gap-2'><FaCheck className='bg-green-800 text-white p-1 rounded-full'/> Boost Event Buzz</div>
+        <div className="flex justify-start items-center gap-2 mt-4 md:text-sm text-xs text-white">
+          <div className='flex items-center gap-2'>
+            <img src="Googlelogo.png" alt="" />
+          </div>
+          <div className='flex items-center gap-2 text-4xl'> 4.6</div>
+          <div className='flex items-center flex-col gap-2 pl-8'>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>(2.5k+ users reviews)</p>
+          </div>
         </div>
       </div>
       <div className=' flex justify-center items-center  p-5  '>
