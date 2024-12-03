@@ -196,12 +196,12 @@ const Campaigns = () => {
       {/* Ongoing Campaigns */}
       <div className="mb-8 relative">
         <h2 className="text-xl font-bold mb-4">Ongoing Campaigns</h2>
-        <button
+        {/* <button
           className="absolute -top-5 right-0 text-black border border-black p-3 font-medium rounded-lg hover:bg-blue-600 hover:text-white"
           onClick={() => router.push("/allcampaigns")}
         >
           View All
-        </button>
+        </button> */}
         <div className="overflow-x-auto max-h-full">
   <div
     className="grid grid-flow-col grid-rows-1 auto-cols-[minmax(250px,_330px)] "

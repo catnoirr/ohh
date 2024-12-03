@@ -180,11 +180,22 @@ const CampaignPage = () => {
               </div>
               </div>
               <p className="text-sm text-gray-600 mt-2">
-                Founded with a vision to reshape the advertising industry, Oohpoint stated with the idea that offline
-                spaces are filled with untapped opportunities for brand engagement. Recognizing the limitations of
-                traditional billboards and print ads, we set out to create a platform that makes advertising more
-                interactive, rewarding, and relevant for both brands and consumers. Today, we're working with businesses
-                across industries to make their advertising campaigns more engaging and effective.
+                Founded with a vision to reshape the advertising industry, Oohpoint started with the idea that offline spaces are filled with untapped opportunities for brand engagement.
+                <span id="dots">...</span><span id="more" style={{ display: "none" }}> Recognizing the limitations of traditional billboards and print ads, we set out to create a platform that makes advertising more interactive, rewarding, and relevant for both brands and consumers. Today, we're working with businesses across industries to make their advertising campaigns more engaging and effective.</span>
+                <button onClick={() => {
+                  const dots = document.getElementById("dots");
+                  const moreText = document.getElementById("more");
+                  const readMoreButton = document.querySelector('.read-more-button');
+                  if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    moreText.style.display = "none";
+                    readMoreButton.textContent = "Read more";
+                  } else {
+                    dots.style.display = "none";
+                    moreText.style.display = "inline";
+                    readMoreButton.textContent = "Read less";
+                  }
+                }} className="read-more-button text-oohpoint-primary-3">Read more</button>
               </p>
               {/* <button className="mt-4 text-white bg-purple-600 hover:bg-purple-700 font-medium rounded-lg px-4 py-2">
                 Visit Now
@@ -334,9 +345,12 @@ const CampaignPage = () => {
           <p className="text-gray-600">
             {firstVendor.address }
           </p>
-          <p>Location : {firstVendor.googleMapLink}
-          </p>
-          <button className="mt-4 text-white bg-blue-600 hover:bg-purple-700 font-medium rounded-lg px-4 py-2">
+          {/* <p>Location : {firstVendor.googleMapLink}
+          </p> */}
+          <button
+            onClick={() => router.push(firstVendor.googleMapLink)}
+            className="mt-4 text-white bg-blue-600 hover:bg-purple-700 font-medium rounded-lg px-4 py-2"
+          >
             Visit Now
           </button>
         </div>
