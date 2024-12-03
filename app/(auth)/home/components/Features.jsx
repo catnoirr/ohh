@@ -18,7 +18,7 @@ const FeaturesSection = () => {
   };
 
   return (
-    <div className="text-center theme text-white py-8">
+    <div className="text-center mission text-white py-8">
       {/* Heading Section */}
       <h1 className="text-5xl font-semibold mb-6  text-center ">
         Powerful SaaS features for your agency

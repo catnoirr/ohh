@@ -9,14 +9,16 @@ import RecentCaseStudy from "../casestudy/components/RecentBlog"
 import MaximumEngagement from './components/MaximumEngagement';
 import GetInTOuch from "./components/GetInTouch"
 import Feature from "../home/components/Features"
+import PricingSection from "./components/Pricing"
 
 const JoinComunity = () => {
     return (
-        <div className='space-y-4'>
+        <div className='space-y-4 overflow-hidden'>
             <FrontPage />
             <Features />
             <Services />
             <HowItWork />
+            <PricingSection/>
             <RecentCaseStudy  />
             <Feature />
             <GetInTOuch />
