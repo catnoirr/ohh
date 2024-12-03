@@ -1,9 +1,54 @@
 "use client"
 import React from "react";
+import { useState } from "react";
+
 import { FaArrowRight } from "react-icons/fa";
 import {useRouter} from 'next/navigation'
+import toast from "react-hot-toast";
+
 const SignUp = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
   const router = useRouter()
+
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setErrorMessage("");
+    setSuccessMessage("");
+
+    try {
+      const res = await fetch("/api/createUser", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+          name,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        toast.success("User created successfully.");
+        router.push("/login"); // Redirect to login after successful signup
+      } else {
+        setErrorMessage(data.message || "Something went wrong.");
+      }
+    } catch (error) {
+      setErrorMessage("Failed to create an account. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div className="flex flex-col md:flex-row  signup h-screen mb-10 ">
         <div className=" w-full md:w-[700px] bg-white ">
@@ -47,27 +92,50 @@ const SignUp = () => {
       <div className="flex flex-col justify-center items-center w-full  p-40   rounded-tl-[80px] bg-white">
         <div className="w-full max-w-md ">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Sign Up</h2>
-          <form className="space-y-4">
+          <form className="space-y-4 "  onSubmit={handleSubmit}>
             <input
               type="text"
+              id="name"
               placeholder="Full Name"
               className="w-full  bg-[#F2F0F5]  p-2 focus:outline-none focus:ring-2 focus:ring-oohpoint-primary-3"
+              required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
             />
             <input
               type="email"
+              id="email"
               placeholder="Email"
               className="w-full  bg-[#F2F0F5]  p-2 focus:outline-none focus:ring-2 focus:ring-oohpoint-primary-3"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <input
               type="password"
+              id="password"
               placeholder="Password"
               className="w-full  bg-[#F2F0F5]  p-2 focus:outline-none focus:ring-2 focus:ring-oohpoint-primary-3"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
+              {/* Error and Success Messages */}
+              {errorMessage && (
+              <p className="text-red-500 text-sm text-center">{errorMessage}</p>
+            )}
+            {successMessage && (
+              <p className="text-green-500 text-sm text-center">
+                {successMessage}
+              </p>
+            )}
+
             <button
               type="submit"
               className="w-full submit-button text-white py-3 rounded-lg hover:bg-purple-700"
+              disabled={loading}
             >
-              Sign Up
+               {loading ? "Signing up..." : "Sign Up"}
             </button>
           </form>
 

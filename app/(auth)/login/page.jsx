@@ -1,9 +1,58 @@
 "use client"
+
 import React from "react";
+import  { useEffect, useState } from "react";
+import { auth } from "@/firebase"; // Assuming you have Firebase initialized in a file called firebase.js
+
+import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import toast from "react-hot-toast";
+
 import { FaArrowRight } from "react-icons/fa";
 import {useRouter} from 'next/navigation'
 const SignUp = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
     const router = useRouter()
+    useEffect(() => {
+      // Check if user is already logged in
+      const unsubscribe = onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // User is already logged in, redirect to dashboard
+          // toast.success("Already logged in...");
+          router.push("/users"); // Adjust the route as per your application
+        }
+      });
+  
+      // Clean up subscription on unmount
+      return () => unsubscribe();
+    }, [router]);
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      setLoading(true);
+      setErrorMessage("");
+  
+      try {
+        // Using Firebase auth to sign in
+        const userCredential = await signInWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
+        const user = userCredential.user;
+  
+        if (user) {
+          toast.success("Login successful.");
+          router.push("/users"); // Adjust the route as per your application
+        }
+      } catch (error) {
+        setErrorMessage("Login failed. Please try again.");
+      } finally {
+        setLoading(false);
+      }
+    };
   return (
     <div className="flex flex-col md:flex-row  signup h-screen mb-10 ">
         <div className=" w-full md:w-[700px] bg-white ">
@@ -49,23 +98,34 @@ const SignUp = () => {
       <div className="flex flex-col justify-center items-center w-full  p-40   rounded-tl-[80px] bg-white">
         <div className="w-full max-w-md ">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Log In</h2>
-          <form className="space-y-4">
+          <form className="space-y-4 "  onSubmit={handleSubmit}>
             
             <input
               type="email"
               placeholder="Email"
               className="w-full  bg-[#F2F0F5]  p-2 focus:outline-none focus:ring-2 focus:ring-oohpoint-primary-3"
+              required
+               
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
             />
             <input
               type="password"
               placeholder="Password"
               className="w-full  bg-[#F2F0F5]  p-2 focus:outline-none focus:ring-2 focus:ring-oohpoint-primary-3"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
+             {errorMessage && (
+              <p className="text-red-500 text-sm text-center">{errorMessage}</p>
+            )}
             <button
               type="submit"
               className="w-full submit-button text-white py-3 rounded-lg hover:bg-purple-700"
+              disabled={loading}
             >
-              Log In
+             {loading ? "Loging in..." : "Log In"}
             </button>
           </form>
 

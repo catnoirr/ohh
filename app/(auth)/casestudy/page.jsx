@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from './components/Hero'
+import Hero from '../sponsership/components/HeroSection'
 import RecentBlog from './components/RecentBlog'
 import AllBlogs from './/components/AllBlogs'
 const Page = () => {
