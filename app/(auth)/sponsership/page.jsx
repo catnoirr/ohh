@@ -5,8 +5,8 @@ import HowItWorks from './components/HowItWorks';
 import SecondSection from './components/Section2'; // Adjust the path if `Hero.js` is in a different directory
 import SponsorshipSection from './components/SponsorshipSection.jsx'
 import Testimonials from './components/Solved.jsx'
-import FAQ from './components/Faq.jsx'
-import ContactSection from './components/Contacts'
+import FAQ from '../home/components/Questions'
+import ContactSection from '../CampusAmbassador/components/ContactSection'
 const Page = () => {
   return (
     
@@ -17,6 +17,8 @@ const Page = () => {
        <HowItWorks/>
        <SponsorshipSection/>
        <Testimonials/>
+
+
        <FAQ/>
        <ContactSection/>
     </div>

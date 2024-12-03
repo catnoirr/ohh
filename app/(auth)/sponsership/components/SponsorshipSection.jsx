@@ -1,38 +1,39 @@
 import React from 'react';
 import { FaUserGraduate, FaChessRook, FaBullseye, FaUsers, FaTheaterMasks } from 'react-icons/fa';
+import Features from "../../about/components/Featured"
+
 
 const SponsorshipSection = () => {
   return (
-    <section className="bg-white py-12 px-6">
+    <section className="mission py-12 px-6 ml-6 mr-6 rounded-lg">
       <div className=" text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">We are Sponsoring</h2>
          <div className='flex gap-20 flex-col md:flex-row'> 
-         <div>
+        
           
-        <p className="text-gray-600 mb-12 text-left">
-          We believe that the best way to create successful marketing campaigns is to work closely with our clients to understand their goals and challenges.
-        </p>
+        
 
         {/* <div className="grid md:grid-cols-2 gap-8"> */}
           {/* Left Side - Sponsorship Image */}
-          <div className="flex justify-center items-center h-72">
-            <img src="spomsor.png" alt="Sponsorship" className="rounded-lg shadow-md object-cover h-full w-full " />
+          <div className="flex justify-center items-center ">
+            <img src="spondershipgraph.png" alt="Sponsorship" className="rounded-lg shadow-md object-cover h-full w-full " />
           </div>
-          </div>
+         
 
          
 
           {/* Right Side - Sponsorship Details */}
-          <div className='w-full p-3 shadow-lg'>
-          <div className="space-y-6 text-left">
+          <div className='w-full p-3 justify-center flex  '>
+          <div className="space-y-6 text-left text-white ">
+          <h2 className="text-3xl font-bold text-white mb-6">We are Sponsoring</h2>
+
             {/* College Fest */}
             <div className="flex items-start space-x-4">
               <div className="bg-purtle-700 p-3 rounded-xl">
                 <FaUserGraduate className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-800">College Fest</h3>
-                <p className="text-gray-600">Treat others with kindness, empathy, and understanding.</p>
+                <h3 className="text-lg font-semibold text-white ">College Fest</h3>
+                <p className="text-white">Treat others with kindness, empathy, and understanding.</p>
               </div>
             </div>
 
@@ -42,8 +43,8 @@ const SponsorshipSection = () => {
                 <FaChessRook className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-800">Product Launch Events</h3>
-                <p className="text-gray-600">Welcome and embrace diversity in all its forms.</p>
+                <h3 className="text-lg font-semibold text-white">Product Launch Events</h3>
+                <p className="text-white">Welcome and embrace diversity in all its forms.</p>
               </div>
             </div>
 
@@ -53,8 +54,8 @@ const SponsorshipSection = () => {
                 <FaBullseye className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-800">B2B Conferences</h3>
-                <p className="text-gray-600">Share knowledge, experiences, and feedback freely.</p>
+                <h3 className="text-lg font-semibold text-white">B2B Conferences</h3>
+                <p className="text-white">Share knowledge, experiences, and feedback freely.</p>
               </div>
             </div>
 
@@ -64,8 +65,8 @@ const SponsorshipSection = () => {
                 <FaUsers className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-800">Corporate Gatherings</h3>
-                <p className="text-gray-600">Work together to support each other's growth.</p>
+                <h3 className="text-lg font-semibold text-white">Corporate Gatherings</h3>
+                <p className="text-white">Work together to support each other's growth.</p>
               </div>
             </div>
 
@@ -75,8 +76,8 @@ const SponsorshipSection = () => {
                 <FaTheaterMasks className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-800">Cultural Events And More</h3>
-                <p className="text-gray-600">Conduct yourself with integrity and honesty.</p>
+                <h3 className="text-lg font-semibold text-white">Cultural Events And More</h3>
+                <p className="text-white">Conduct yourself with integrity and honesty.</p>
               </div>
             </div>
 
@@ -86,6 +87,7 @@ const SponsorshipSection = () => {
 
         </div>
       </div>
+      <Features/>
     </section>
   );
 };

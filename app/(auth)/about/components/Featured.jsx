@@ -2,7 +2,7 @@ import React from 'react';
 
 const FeaturedLogos = () => {
   return (
-    <div className="flex flex-col  justify-center  py-8 bg-white  gap-2">
+    <div className="flex flex-col  justify-center  py-8  gap-2">
       <div className="text-sm font-semibold text-gray-500">Featured In</div>
       <div className="flex  justify-around" >
         {/* Logo 1 */}

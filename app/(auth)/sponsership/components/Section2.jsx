@@ -8,33 +8,21 @@ const Hero = () => {
       {/* Left Side - Images and Statistics */}
       <div className="flex gap-4">
         {/* Image 1 */}
-        
-        <img src="/parterners-image.png" alt="Workplace" className="" />
+        <div className="relative">
+          <img src="/circle1.png" alt="Workplace" className="w-full" />
+          <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  p-3 bg-[#B77DC4] text-white rounded-3xl">Get Sponsership</button>
+        </div>
         
         {/* Statistics Boxes */}
         <div className='flex flex-col gap-4 '>
 
-        {/* <div className="flex space-x-4 items-center justify-center">
-          <div className="bg-black text-white text-center py-4 px-6 rounded-md">
-            <p className="text-xl font-bold">10+</p>
-            <p className="text-sm">Years of experience</p>
-          </div>
-          <div className="bg-purtle-700 text-white text-center py-4 px-6 rounded-md">
-            <p className="text-xl font-bold">1.2K</p>
-            <p className="text-sm">Happy Customers</p>
-          </div>
-        </div> */}
-
-        {/* Image 2 */}
-        {/* <div className='h-full'>
-        <img src="/image2.png" alt="Workplace" className="rounded-lg shadow-md h-full object-cover" />
-        </div> */}
+        
       </div>
       </div>
 
       {/* Right Side - Content */}
-      <div className="mt-8 md:mt-0 md:ml-16">
-      <div className="flex items-center mb-4  bg-gray-200 border rounded-xl shadow p-2 w-64 sm:w-72">
+      <div className="mt-8 md:mt-0 md:ml-16 space-y-10">
+      <div className="flex items-center mb-4  bg-[#9267D16B]   rounded-xl shadow p-2 w-64 sm:w-72">
             <i> <FaAward className="text-4xl text-red-800" /></i>
             <p className="ml-2 text-sm sm:text-base">Your Gateway to success</p>
           </div>
@@ -61,7 +49,7 @@ const Hero = () => {
             Boost Event Buzz
           </li>
         </ul>
-        <button className="mt-6 bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-purple-900">
+        <button className="mt-6 bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-purple-900">
           Get Sponsership
         </button>
       </div>

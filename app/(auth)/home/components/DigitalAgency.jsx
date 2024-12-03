@@ -11,7 +11,7 @@ const DigitalAgency = () => {
          
 
           <img
-            src="giving-boost.png"
+            src="turtleji.png"
             alt="Meeting illustration"
             className="w-full md:max-w-lg mx-auto max-w-sm   h-[500px] md:ml-8 overflow-hidden "
           />
