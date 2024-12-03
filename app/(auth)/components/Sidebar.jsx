@@ -91,8 +91,8 @@ export default function Sidebar() {
           <SidebarItem icon={<FaUser />} label="Advertise" route="/advertise" isExpanded={isExpanded} />
           {/* <SidebarItem icon={<FaFileAlt />} label="Blogs" route="/blogs" isExpanded={isExpanded} /> */}
           <SidebarItem icon={<FaQuestionCircle />} label="About" route="/about" isExpanded={isExpanded} />
-          <SidebarItem icon={<FaSignInAlt />} label="SignIn" route="/sign-in" isExpanded={isExpanded} />
-          <SidebarItem icon={<FaSignOutAlt />} label="SignUp" route="/sign-up" isExpanded={isExpanded} />
+          <SidebarItem icon={<FaSignInAlt />} label="SignIn" route="/login" isExpanded={isExpanded} />
+          <SidebarItem icon={<FaSignOutAlt />} label="SignUp" route="/signup" isExpanded={isExpanded} />
 
           <div className="border-t border-gray-300 my-2"></div>
 
