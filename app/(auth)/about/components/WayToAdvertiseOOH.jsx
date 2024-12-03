@@ -18,15 +18,14 @@ const StorySection = () => {
       </div>
         {/* Guiding Principles */}
         <div className="w-full ">
-          <h2 className="text-3xl font-bold mb-4">Our Guiding Principles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex  space-x-4">
             <div className="bg-blue-600 p-3 h-12 w-12 rounded-lg flex items-center justify-center">
                 <FaFileAlt className="text-white text-xl sm:text-2xl" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg">Real-Time Analytics</h3>
-                <p className=" text-sm"> Know exactly how your campaign is performing with real-time data and insights.</p>
+                <h3 className="font-semibold text-lg text-gray-800">Real-Time Analytics</h3>
+                <p className=" text-sm text-gray-800"> Know exactly how your campaign is performing with real-time data and insights.</p>
               </div>
             </div>
             <div className="flex  space-x-4">
@@ -34,8 +33,8 @@ const StorySection = () => {
                 <FaFileAlt className="text-white text-xl sm:text-2xl" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg">Engagement & Reward</h3>
-                <p className=" text-sm">Make every interaction count by offering users discounts and incentives, creating more </p>
+                <h3 className="font-semibold text-lg text-gray-800">Engagement & Reward</h3>
+                <p className=" text-sm text-gray-800">Make every interaction count by offering users discounts and incentives, creating more </p>
               </div>
             </div>
             <div className="flex  space-x-4">
@@ -43,8 +42,8 @@ const StorySection = () => {
                 <FaStar className="text-white text-xl sm:text-2xl" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg">User-Centricity</h3>
-                <p className=" text-sm">We prioritize the experience of both the brands we serve and the consumers who engage with the ads.</p>
+                <h3 className="font-semibold text-lg text-gray-800">User-Centricity</h3>
+                <p className=" text-sm text-gray-800">We prioritize the experience of both the brands we serve and the consumers who engage with the ads.</p>
               </div>
             </div>
             <div className="flex  space-x-4">
@@ -52,8 +51,8 @@ const StorySection = () => {
                 <FaBookmark className="text-white text-xl sm:text-2xl" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg">Collaboration</h3>
-                <p className=" text-sm">Building strong partnerships with vendors, brands, and users to create a cohesive advertising ecosystem.</p>
+                <h3 className="font-semibold text-lg text-gray-800">Collaboration</h3>
+                <p className=" text-sm text-gray-800">Building strong partnerships with vendors, brands, and users to create a cohesive advertising ecosystem.</p>
               </div>
             </div>
           </div>
