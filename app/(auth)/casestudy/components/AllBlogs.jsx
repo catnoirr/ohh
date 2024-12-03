@@ -84,7 +84,6 @@ function BlogPostsGrid() {
     );
   }
 
-
   return (
     <section className="p-8 bg-white">
       <h2 className="text-3xl font-semibold text-gray-800 mb-6">All Case Studies</h2>
@@ -131,44 +130,47 @@ function BlogPostsGrid() {
         ))}
       </div>
 
-      {/* Pagination Controls */}
-      <div className="flex justify-around items-center space-x-2 mt-8">
-        <button
-          onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 1}
-          className="text-gray-500 hover:text-gray-700 flex items-center"
-        >
-          <FiArrowLeft className="mr-1" />
-          Previous
-        </button>
+      {totalPages > 1 && (
+        <div className="flex justify-around items-center space-x-2 mt-8">
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="text-gray-500 hover:text-gray-700 flex items-center"
+          >
+            <FiArrowLeft className="mr-1" />
+            Previous
+          </button>
 
-        <div className="flex space-x-1">
-          {Array.from({ length: totalPages }, (_, index) => (
-            <button
-              key={index + 1}
-              onClick={() => handlePageChange(index + 1)}
-              className={`px-3 py-1 text-gray-700 rounded ${
-                currentPage === index + 1
-                  ? "bg-purple-200 text-purple-700"
-                  : "hover:bg-gray-200"
-              }`}
-            >
-              {index + 1}
-            </button>
-          ))}
+          <div className="flex space-x-1">
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button
+                key={index + 1}
+                onClick={() => handlePageChange(index + 1)}
+                className={`px-3 py-1 text-gray-700 rounded ${
+                  currentPage === index + 1
+                    ? "bg-purple-200 text-purple-700"
+                    : "hover:bg-gray-200"
+                }`}
+              >
+                {index + 1}
+              </button>
+            ))}
+          </div>
+
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="text-gray-500 hover:text-gray-700 flex items-center"
+          >
+            Next
+            <FiArrowRight className="ml-1" />
+          </button>
         </div>
-
-        <button
-          onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}
-          className="text-gray-500 hover:text-gray-700 flex items-center"
-        >
-          Next
-          <FiArrowRight className="ml-1" />
-        </button>
-      </div>
+      )}
     </section>
   );
 }
 
 export default BlogPostsGrid;
+
+

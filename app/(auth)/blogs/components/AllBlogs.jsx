@@ -68,7 +68,6 @@ function BlogPostsGrid() {
     router.push(`/blogs/${id}`); // Programmatically navigate to the blog post details page
   };
 
-  
   if (blogPosts.length === 0) {
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
@@ -132,41 +131,44 @@ function BlogPostsGrid() {
       </div>
 
       {/* Pagination Controls */}
-      <div className="flex justify-around items-center space-x-2 mt-8">
-        <button
-          onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 1}
-          className="text-gray-500 hover:text-gray-700 flex items-center"
-        >
-          <FiArrowLeft className="mr-1" />
-          Previous
-        </button>
+      {blogPosts.length > postsPerPage && (
+        <div className="flex justify-around items-center space-x-2 mt-8">
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="text-gray-500 hover:text-gray-700 flex items-center"
+          >
+            <FiArrowLeft className="mr-1" />
+            Previous
+          </button>
 
-        <div className="flex space-x-1">
-          {Array.from({ length: totalPages }, (_, index) => (
-            <button
-              key={index + 1}
-              onClick={() => handlePageChange(index + 1)}
-              className={`px-3 py-1 text-gray-700 rounded ${
-                currentPage === index + 1 ? "text-purple-700" : "hover:bg-gray-200"
-              }`}
-            >
-              {index + 1}
-            </button>
-          ))}
+          <div className="flex space-x-1">
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button
+                key={index + 1}
+                onClick={() => handlePageChange(index + 1)}
+                className={`px-3 py-1 text-gray-700 rounded ${
+                  currentPage === index + 1 ? "text-purple-700" : "hover:bg-gray-200"
+                }`}
+              >
+                {index + 1}
+              </button>
+            ))}
+          </div>
+
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="text-gray-500 hover:text-gray-700 flex items-center"
+          >
+            Next
+            <FiArrowRight className="ml-1" />
+          </button>
         </div>
-
-        <button
-          onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}
-          className="text-gray-500 hover:text-gray-700 flex items-center"
-        >
-          Next
-          <FiArrowRight className="ml-1" />
-        </button>
-      </div>
+      )}
     </section>
   );
 }
 
 export default BlogPostsGrid;
+
