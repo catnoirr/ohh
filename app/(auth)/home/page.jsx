@@ -6,11 +6,12 @@ import DigitalAgency from './components/DigitalAgency'
 import OurClient from './components/OurClient'
 import HowsItWork from './components/Steps'
 import Blog from './components/Blog'
-import Success from './components/Success'
+import Success from '../CampusAmbassador/components/Solved'
 import Questions from './components/Questions'
 import EventEngagement from './components/EventEngagement'
 import Campaign from './components/Campaign'
 import Feature from './components/Features'
+import JoinWhatsapp from './components/JoinWhatsapp'
 
 
 const Page = () => {
@@ -29,6 +30,7 @@ const Page = () => {
       <Blog/>
       <Success/>
       <Questions/>
+<JoinWhatsapp/>
       <EventEngagement/>
 
       </div>
