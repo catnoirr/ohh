@@ -2,7 +2,7 @@
 
 import React from "react";
 import  { useEffect, useState } from "react";
-import { auth } from "@/firebase"; // Assuming you have Firebase initialized in a file called firebase.js
+import { auth, provider, signInWithPopup, signOut } from "@/firebase";
 
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import toast from "react-hot-toast";
@@ -15,6 +15,20 @@ const SignUp = () => {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
     const router = useRouter()
+    const handleGoogleSignIn = async () => {
+      try {
+        const result = await signInWithPopup(auth, provider);
+        const credential = provider.credentialFromResult(result);
+        const token = credential.accessToken;
+        setUser(result.user); // Save user info
+        console.log("Logged in user:", result.user);
+  
+        // Redirect to the Users section
+        router.push("/users"); // Assuming '/users' is your Users section route
+      } catch (error) {
+        console.error("Error during sign-in:", error);
+      }
+    };
     useEffect(() => {
       // Check if user is already logged in
       const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -147,7 +161,7 @@ const SignUp = () => {
             Log In with Truecaller
             </div>
           </button>
-          <button className="w-full  text-gray-400 border  text-sm font-base flex   mb-4 justify-evenly">
+          <button className="w-full  text-gray-400 border  text-sm font-base flex   mb-4 justify-evenly" onClick={handleGoogleSignIn}>
             <div className=" h-12 w-12 flex justify-center items-center border-r ">
             <img
               src="/Googlelogo.png" // Replace with Truecaller icon

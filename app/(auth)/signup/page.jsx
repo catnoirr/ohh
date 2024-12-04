@@ -1,10 +1,16 @@
 "use client"
 import React from "react";
 import { useState } from "react";
-
+import { auth, provider, signInWithPopup, signOut } from "@/firebase";
 import { FaArrowRight } from "react-icons/fa";
 import {useRouter} from 'next/navigation'
 import toast from "react-hot-toast";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
+const db = getFirestore(); // Initialize Firestore
+const generateUserId = () => {
+  const timestamp = Date.now().toString(); // Current timestamp
+  return `US${timestamp}`; // Prefix with 'US' and add the timestamp
+};
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -13,9 +19,55 @@ const SignUp = () => {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [user, setUser] = useState(null);
   const router = useRouter()
 
-  
+ 
+  const handleGoogleSignIn = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const firebaseUser = result.user;
+
+      // Generate a userId
+      const userId = generateUserId();
+
+      // Prepare user data
+      const userData = {
+        createdAt: new Date().toLocaleString("en-US", {
+          timeZone: "Asia/Kolkata",
+          hour12: true,
+        }),
+        email: firebaseUser.email,
+        name: firebaseUser.displayName,
+        role: "user",
+        status: "unblocked",
+        uid: firebaseUser.uid,
+        userId: userId,
+      };
+
+      // Save to Firestore
+      const userDoc = doc(db, "users", userId); // Use userId as document ID
+      await setDoc(userDoc, userData);
+
+      setUser(firebaseUser); // Update local state
+      console.log("User signed in and data saved:", userData);
+
+      // Redirect to the Users section
+      router.push("/users");
+    } catch (error) {
+      console.error("Error during sign-in:", error);
+    }
+  };
+
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+      setUser(null);
+      console.log("User signed out.");
+    } catch (error) {
+      console.error("Error during sign-out:", error);
+    }
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -157,7 +209,7 @@ const SignUp = () => {
             Sign Up with Truecaller
             </div>
           </button>
-          <button className="w-full  text-gray-400 border  text-sm font-base flex   mb-4 justify-evenly">
+          <button className="w-full  text-gray-400 border  text-sm font-base flex   mb-4 justify-evenly" onClick={handleGoogleSignIn}>
             <div className=" h-12 w-12 flex justify-center items-center border-r ">
             <img
               src="/Googlelogo.png" // Replace with Truecaller icon
